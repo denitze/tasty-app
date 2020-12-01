@@ -5,19 +5,19 @@ const Navigation = () => {
         <nav id="navBar">
             <ul>
                 <li>
-                    <NavLink to="/" exact>HOME</NavLink>
+                    <Link to="/" exact>HOME</Link>
                 </li>
                 <li>
-                    <NavLink to="/entertainment">ENTERTAINMENT</NavLink>
+                    <Link to="/entertainment">ENTERTAINMENT</Link>
                 </li>
                 <li>
-                    <NavLink to="/shop">SHOP</NavLink>
+                    <Link to="/shop">SHOP</Link>
                 </li>
                 <li>
-                    <NavLink to="/events">EVENTS</NavLink>
+                    <Link to="/events">EVENTS</Link>
                 </li>
                 <li>
-                    <NavLink to="/contact">CONTACT</NavLink>
+                    <Link to="/contact">CONTACT</Link>
                 </li>
             </ul>
         </nav>
