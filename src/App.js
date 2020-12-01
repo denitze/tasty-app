@@ -9,20 +9,35 @@ import {
   Route
 } from "react-router-dom";
 import Navigation from './components/Navigation';
-import Home from './components/Home';
+import OneRecipe from './components/OneRecipe';
 import Footer from './components/Footer';
 
 
 function App() {
   return (
 <Router>
-      <Navigation />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/contact" component={Contact} />
-      </Switch>
-      <Footer />
-    </Router>
+
+<Navigation />
+
+
+<Switch>
+
+  <Route path="/today" component={OneRecipe} />
+  
+  <Route path="/allrecipe" component={OneRecipe} />
+
+  <Route path="/vegetarian" component={OneRecipe} />
+  
+  <Route path="/bettereat" component={OneRecipe} />
+
+  <Route path="/rondomrecipe" component={OneRecipe} />
+
+</Switch>
+
+<Footer />
+
+
+</Router>
 
   );
 }
