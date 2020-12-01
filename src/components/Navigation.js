@@ -9,20 +9,20 @@ const Navigation = () => {
         <ul id="navigation">
         
         <li>
-          <Link to="/today" style={{color:"black" ,textDecoration: "none",}}>Today</Link>
+          <Link to="/today" >Today</Link>
         </li>
         <li>
-          <Link to="/allrecipe" style={{color:"black",textDecoration: "none"}}>All Recipe</Link>
+          <Link to="/allrecipe" >All Recipe</Link>
         </li>
         <li>
-          <Link to="/vegetarian" style={{color:"black",textDecoration: "none"}}>Vegetarian</Link>
+          <Link to="/vegetarian" >Vegetarian</Link>
         </li>
         <li>
-          <Link to="/bettereat" style={{color:"black",textDecoration: "none"}}>Better eat</Link>
+          <Link to="/bettereat" >Better eat</Link>
         </li>
 
         <li>
-          <Link to="/rondomrecipe" style={{color:"black",textDecoration: "none"}}>Rondom recipe</Link>
+          <Link to="/rondomrecipe" >Rondom recipe</Link>
         </li>
        
             

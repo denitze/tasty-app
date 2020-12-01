@@ -1,16 +1,14 @@
 import './App.css';
-
-
 import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Link,
   Route
 } from "react-router-dom";
 import Navigation from './components/Navigation';
 import OneRecipe from './components/OneRecipe';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
+import SectionRecipes from './components/SectionRecipes';
 
 
 function App() {
@@ -22,7 +20,7 @@ function App() {
 
 <Switch>
 
-  <Route path="/today" component={OneRecipe} />
+  <Route path="/today" component={SectionRecipes} />
   
   <Route path="/allrecipe" component={OneRecipe} />
 
@@ -34,7 +32,7 @@ function App() {
 
 </Switch>
 
-<Footer />
+{/* <Footer /> */}
 
 
 </Router>
