@@ -6,7 +6,7 @@ import axios from 'axios';
 
 var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
 
-class SectionRecipe2 extends React.Component {
+class Vegetarian extends React.Component {
 
     constructor(props) {
       super(props);
@@ -28,7 +28,7 @@ class SectionRecipe2 extends React.Component {
   
     handleSearch = (searchWord) => {
       if(searchWord){
-      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&number=6&apiKey='+apiKey)
+      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=vegetarian&number=6&apiKey='+apiKey)
         .then(res => {
           this.setState({
             recipe: res.data.results
@@ -44,11 +44,11 @@ class SectionRecipe2 extends React.Component {
       return (
         <section id="SectionRecipe">
             <div className="inputRecipe">
-                <h1>Find a recipe, an idea, an inspiration...</h1>
+                <h1>Find a vegetarian recipe, an idea, an inspiration...</h1>
                 <input type="text" name="" id="ingredient" placeholder="enter an ingredient" onChange={this.handleChange} onKeyUp={this.handleEnter}  />
                 <button onClick={()=>this.handleSearch(this.state.searchWord)}>Search for recipes!</button>
             </div>
-            <div id="RecipeCard">
+            <div id="RecipeCard">  
           {
             
             this.state.recipe ?
@@ -58,7 +58,6 @@ class SectionRecipe2 extends React.Component {
                             <div className="recipe" key={recipe.id}>
                                 <img src={' https://spoonacular.com/recipeImages/' + recipe.id + '-480x360'}alt="" />
                                 <h2>{recipe.title}</h2>
-                                <p>Are you craving for {recipe.title}? Then check out the full recipe instructions!</p>
                                 <button>Action</button>
                             </div>
                         </div>
@@ -70,4 +69,4 @@ class SectionRecipe2 extends React.Component {
   
   }
   
-  export default SectionRecipe2;
+  export default Vegetarian;

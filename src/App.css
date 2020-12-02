@@ -1,7 +1,48 @@
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+
+
+/* _______________________Navigation */
+#NAVI {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+}
+
+#NAVI #logoTASTY {
+  color: #ff6f61;
+  font-size: 2rem;
+}
+#navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  padding-left: 20rem;
+  height: 7vh;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+#navigation li {
+  list-style: none;
+}
+#navigation li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Section (Section Recipe2) mit Recipes und Input Feld */
+
+#SectionRecipe {
+  margin:5vh 10%;
+  min-height: 48vh;
 }
 
 .inputRecipe {
@@ -10,10 +51,8 @@
 
 #RecipeCard {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-
+  grid-template-columns: repeat(3,1fr);
+} 
 
 #RecipeCard #food-result .recipe {
   width:80%;
@@ -23,36 +62,82 @@
   align-items: center;
   border-radius: 20px;
   margin: 5vh auto;
-  padding:1rem;
-  box-shadow:  10px 10px 25px #b8babe, 
-           -10px -10px 25px #fafcff;
-
+  padding: 1rem;
+  box-shadow: 10px 10px 25px #b8babe, -10px -10px 25px #fafcff;
 }
 
 #RecipeCard .recipe img {
-  width:100%;
+  width: 100%;
   border-radius: 18px;
-  margin-bottom:2vh;
+  margin-bottom: 2vh;
 }
 
-#RecipeCard .recipe .icon{
-  width:20px;
+#RecipeCard .recipe .icon {
+  width: 20px;
   border-radius: 18px;
-  margin:0;
+  margin: 0;
 }
 
 #RecipeCard .recipe h2 {
-  margin:2vh auto;
+  margin: 2vh auto;
 }
 
 #RecipeCard .recipe p {
-  margin:2vh auto;
-
+  margin: 2vh auto;
 }
 
 #RecipeCard #food-result .recipe button {
-  padding:.5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 5px;
-  border:none;
-  background:#EF6D5F;
-} 
+  border: none;
+  background: #ef6d5f;
+}
+
+
+
+
+
+
+/* _______________Footer */
+
+footer {
+  background: #ff6f61;
+  height: 35vh;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#Facebook {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+  border-radius: 50%;
+}
+
+#Instagram {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+  border-radius: 50%;
+}
+#Twitter {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+  border-radius: 50%;
+}
+
+#Youtube {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+  border-radius: 50%;
+}
