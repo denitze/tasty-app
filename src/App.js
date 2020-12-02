@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Navigation from './components/Navigation';
 import OneRecipe from './components/OneRecipe';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import SectionRecipes from './components/SectionRecipes';
 
 
@@ -32,7 +32,7 @@ function App() {
 
 </Switch>
 
-{/* <Footer /> */}
+<Footer />
 
 
 </Router>

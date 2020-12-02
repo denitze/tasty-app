@@ -86,3 +86,52 @@
   border: none;
   background: #ef6d5f;
 }
+/* _______________Footer */
+
+footer {
+  background: #ff6f61;
+  height: 35vh;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#Facebook {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+
+  border-radius: 50%;
+}
+
+#Instagram {
+  /* background: linear-gradient(rgb(214, 36, 214), orange); */
+
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+
+  border-radius: 50%;
+}
+#Twitter {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+
+  border-radius: 50%;
+}
+
+#Youtube {
+  font-size: 6rem;
+  background: #fff;
+  margin: 4rem 6rem;
+  padding: 25px;
+
+  border-radius: 50%;
+}
