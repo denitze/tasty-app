@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 // import Navigation from './components/Navigation';
 // import Footer from './components/Footer';
-import SectionRecipes from './components/SectionRecipes';
+import SectionRecipe2 from './components/SectionRecipe2';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 <Router>
       {/* <Navigation /> */}
       <Switch>
-        <Route path="/" exact component={SectionRecipes} />
+        <Route path="/" exact component={SectionRecipe2} />
       </Switch>
       {/* <Footer /> */}
     </Router>
