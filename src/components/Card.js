@@ -1,7 +1,6 @@
 import {Link} from "react-router-dom";
 
 const Card = (props) => {
-    console.log(props.recipe);
     return ( 
             <div id="food-result">
                 <div className="recipe">

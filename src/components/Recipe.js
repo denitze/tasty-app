@@ -10,7 +10,7 @@ class Recipe extends React.Component {
     render() { 
         console.log(this.props.match.params.id);
         return ( 
-            <div>Recipe Component</div>
+            <div>Recipe Component {this.props.match.params.id}</div>
          );
     }
 }

@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import RandomBetter from './RandomBetter';
+import {Link} from "react-router-dom";
  
 
-var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
+// var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
+var apiKey2 = "df611f75b97141be917063ad735d8e66";
 
 class BetterEat extends React.Component {
 
@@ -27,11 +29,14 @@ class BetterEat extends React.Component {
     }
   
     handleSearch = (searchWord) => {
+      console.log(searchWord);
       if(searchWord){
-      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=paleo&number=6&apiKey='+apiKey)
+      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=paleo&number=6&apiKey='+apiKey2)
         .then(res => {
+          console.log(res.data.results);
           this.setState({
-            recipe: res.data.results
+            recipe: res.data.results,
+            isLoading:true
           });
         })
         .catch( err => console.log(err))
@@ -53,15 +58,20 @@ class BetterEat extends React.Component {
             
             this.state.isLoading ?
             this.state.recipe.map(
+             
               (recipe)=> 
-                        <div id="food-result">
-                            <div className="recipe" key={recipe.id}>
-                                <img src={' https://spoonacular.com/recipeImages/' + recipe.id + '-480x360'}alt="" />
-                                <h2>{recipe.title}</h2>
-                                <button>Action</button>
-                            </div>
-                        </div>
+              <div id="food-result">
+              <div className="recipe" key={recipe.id}>
+                  <img src={' https://spoonacular.com/recipeImages/' + recipe.id + '-480x360'}alt="" />
+                  <h2>{recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...`}</h2>
+                  <p>Are you craving for {recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...`}? Then check out the full recipe instructions!</p>
+                  <button>
+                    <Link to={{ pathname: `/recipe/${recipe.id}` , state: { recipe: recipe.title}}}>See Recipe</Link>
+                  </button>
+              </div>
+          </div>
             ) : <RandomBetter />
+             
           } </div> 
               </section> 
       );

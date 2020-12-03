@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 // import Navigation from './components/Navigation';
 // import Footer from './components/Footer';
-import SectionRecipe2 from './components/SectionRecipe2';
+import SectionRecipe from './components/SectionRecipe';
 import Navigation from './components/Navigation';
 // import OneRecipe from './components/OneRecipe';
 import Footer from './components/Footer';
@@ -26,7 +26,7 @@ function App() {
 
 <Switch>
 
-<Route path="/" exact component={SectionRecipe2} />
+<Route path="/" exact component={SectionRecipe} />
 
 <Route path="/recipe/:id" component={Recipe} />
   

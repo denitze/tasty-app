@@ -4,10 +4,10 @@ import RandomAll from "./RandomAll";
 import {Link} from "react-router-dom";
  
 
-var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
+// var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
 var apiKey2 = "df611f75b97141be917063ad735d8e66";
 
-class SectionRecipe2 extends React.Component {
+class SectionRecipe extends React.Component {
 
     constructor(props) {
       super(props);
@@ -66,7 +66,7 @@ class SectionRecipe2 extends React.Component {
                                 <h2>{recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...`}</h2>
                                 <p>Are you craving for {recipe.title.length < 20 ? `${recipe.title}` : `${recipe.title.substring(0,25)}...`}? Then check out the full recipe instructions!</p>
                                 <button>
-                                  <Link to={{ pathname: `/recipe/${recipe.id}` , state: { recipe: recipe.title}}}>Action</Link>
+                                  <Link to={{ pathname: `/recipe/${recipe.id}` , state: { recipe: recipe.title}}}>See Recipe</Link>
                                 </button>
                             </div>
                         </div>
@@ -85,4 +85,4 @@ class SectionRecipe2 extends React.Component {
   
   }
   
-  export default SectionRecipe2;
+  export default SectionRecipe;
