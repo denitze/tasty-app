@@ -9,11 +9,13 @@ import {
 // import Footer from './components/Footer';
 import SectionRecipe2 from './components/SectionRecipe2';
 import Navigation from './components/Navigation';
-import OneRecipe from './components/OneRecipe';
+// import OneRecipe from './components/OneRecipe';
 import Footer from './components/Footer';
-import SectionRecipes from './components/SectionRecipes';
 import Vegetarian from './components/Vegetarian';
 import BetterEat from './components/BetterEat';
+import Random from './components/Random';
+import Today from './components/Today';
+import Recipe from './components/Recipe';
 
 
 function App() {
@@ -24,15 +26,17 @@ function App() {
 
 <Switch>
 
-<Route path="/allrecipe" exact component={SectionRecipe2} />
+<Route path="/" exact component={SectionRecipe2} />
+
+<Route path="/recipe/:id" component={Recipe} />
   
-  <Route path="/today" component={OneRecipe} />
+  <Route path="/today" component={Today} />
 
   <Route path="/vegetarian" component={Vegetarian} />
   
   <Route path="/bettereat" component={BetterEat} />
 
-  <Route path="/randomrecipe" component={OneRecipe} />
+  <Route path="/randomrecipe" component={Random} />
 
 </Switch>
 
@@ -45,3 +49,5 @@ function App() {
 }
 
 export default App;
+
+  

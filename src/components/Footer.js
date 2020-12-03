@@ -1,13 +1,12 @@
 import { FaFacebookF } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa"
 import { FaTwitter } from "react-icons/fa"
-// import { IoLogoYoutube } from "react-icons/io"
 
 
 const Footer = () => {
     return ( 
         <footer>
-        <div class="footer-social-icons">
+        <div className="footer-social-icons">
       
             
             <FaFacebookF id="Facebook"  />
@@ -15,8 +14,6 @@ const Footer = () => {
             <FaInstagram id="Instagram" />
 
             <FaTwitter id="Twitter" />
-
-            {/* <IoLogoYoutube id="Youtube" /> */}
            
          </div>
         </footer>

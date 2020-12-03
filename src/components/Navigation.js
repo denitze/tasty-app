@@ -10,7 +10,7 @@ const Navigation = () => {
         
        
         <li>
-          <Link to="/allrecipe" >All Recipe</Link>
+          <Link to="/" >All Recipe</Link>
         </li>
         <li>
           <Link to="/today" >Today</Link>

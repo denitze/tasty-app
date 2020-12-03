@@ -1,6 +1,7 @@
 // import RecipeCard from "./RecipeCard"
 import React from 'react';
 import axios from 'axios';
+import RandomVegetarian from './RandomVegetarian';
 // import recipeData from "../data/recipeDataDenise.json"
  
 
@@ -12,7 +13,8 @@ class Vegetarian extends React.Component {
       super(props);
       this.state = {
         searchWord:'',
-        recipe: []
+        recipe: [],
+        isLoading: false
       }
     }
     
@@ -49,9 +51,10 @@ class Vegetarian extends React.Component {
                 <button onClick={()=>this.handleSearch(this.state.searchWord)}>Search for recipes!</button>
             </div>
             <div id="RecipeCard">  
+            
           {
             
-            this.state.recipe ?
+            this.state.isLoading ?
             this.state.recipe.map(
               (recipe)=> 
                         <div id="food-result">
@@ -61,7 +64,7 @@ class Vegetarian extends React.Component {
                                 <button>Action</button>
                             </div>
                         </div>
-            ) : ''
+            ) : <RandomVegetarian />
           } </div> 
               </section> 
       );

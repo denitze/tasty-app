@@ -1,7 +1,6 @@
-// import RecipeCard from "./RecipeCard"
 import React from 'react';
 import axios from 'axios';
-// import recipeData from "../data/recipeDataDenise.json"
+import RandomBetter from './RandomBetter';
  
 
 var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
@@ -12,7 +11,8 @@ class BetterEat extends React.Component {
       super(props);
       this.state = {
         searchWord:'',
-        recipe: []
+        recipe: [],
+        isLoading: false
       }
     }
     
@@ -51,7 +51,7 @@ class BetterEat extends React.Component {
             <div id="RecipeCard">  
           {
             
-            this.state.recipe ?
+            this.state.isLoading ?
             this.state.recipe.map(
               (recipe)=> 
                         <div id="food-result">
@@ -61,7 +61,7 @@ class BetterEat extends React.Component {
                                 <button>Action</button>
                             </div>
                         </div>
-            ) : ''
+            ) : <RandomBetter />
           } </div> 
               </section> 
       );
