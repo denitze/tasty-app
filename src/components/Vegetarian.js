@@ -32,7 +32,7 @@ class Vegetarian extends React.Component {
   
     handleSearch = (searchWord) => {
       if(searchWord){
-      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=vegetarian&number=6&apiKey='+apiKey2)
+      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=vegetarian&number=3&apiKey='+apiKey2)
         .then(res => {
           this.setState({
             recipe: res.data.results,

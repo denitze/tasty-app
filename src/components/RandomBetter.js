@@ -8,7 +8,7 @@ import Card from './Card';
 const RandomBetter = () => {
     return ( 
         
-            <Get url="https://api.spoonacular.com/recipes/random?&number=9&tags=paleo&apiKey=df611f75b97141be917063ad735d8e66" >
+            <Get url="https://api.spoonacular.com/recipes/random?&number=3&tags=paleo&apiKey=df611f75b97141be917063ad735d8e66" >
             {(error, response, isLoading, makeRequest, axios) => {
                 if(error) {
                 return (<div>Something bad happened: {error.message} <button onClick={() => makeRequest({ params: { reload: true } })}>Retry</button></div>)

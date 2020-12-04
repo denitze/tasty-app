@@ -30,7 +30,7 @@ class SectionRecipe extends React.Component {
   
     handleSearch = (searchWord) => {
       if(searchWord){
-      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&number=9&apiKey='+apiKey2)
+      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&number=3&apiKey='+apiKey2)
         .then(res => {
           this.setState({
             recipe: res.data.results,

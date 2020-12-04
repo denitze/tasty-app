@@ -31,7 +31,7 @@ class BetterEat extends React.Component {
     handleSearch = (searchWord) => {
       console.log(searchWord);
       if(searchWord){
-      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=paleo&number=6&apiKey='+apiKey2)
+      axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=paleo&number=3&apiKey='+apiKey2)
         .then(res => {
           console.log(res.data.results);
           this.setState({
