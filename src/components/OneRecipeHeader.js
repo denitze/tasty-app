@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 const OneRecipeHeader = (probs) => {
   // console.log(probs.rezept);
   // console.log(probs.rezept.title);
@@ -19,12 +21,16 @@ const OneRecipeHeader = (probs) => {
   // console.log(scoreStars());
   return (
     <div>
-      <div className="one-recipe-title">
+      <OneRecipeTitle>
         <h3>{probs.rezept.title}</h3>
-      </div>
+      </OneRecipeTitle>
       <div className="RatingStars">{scoreStars()}</div>
     </div>
   );
 };
+
+const OneRecipeTitle = styled.div`
+  margin-bottom: 1.5rem;
+`;
 
 export default OneRecipeHeader;

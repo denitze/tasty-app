@@ -11,24 +11,27 @@ import React from 'react';
 import axios from 'axios';
 // import OneRecipeSummary from '../components/OneRecipeSummary';
 
+var apiKey = '7df74c97721c438485ec13af5100c9ad';
+// var apiKey = 'bc21dba5538d4477ba88fa9e21a53749';
+
 class OneRecipe extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       rezept: [],
-      id: 635350,
-      // id: this.props.match.params.id,
+      // id: 635350,
+      id: this.props.match.params.id,
     };
   }
   componentDidMount() {
     axios
-      //   .get(
-      //     'https://api.spoonacular.com/recipes/' +
-      //       this.state.id +
-      //       '/information?apiKey=' +
-      //       apiKey
-      //   )
-      .get('http://localhost:3000/data/recipeData.json')
+      .get(
+        'https://api.spoonacular.com/recipes/' +
+          this.state.id +
+          '/information?apiKey=' +
+          apiKey
+      )
+      // .get('http://localhost:3000/data/recipeData.json')
       .then((res) => {
         this.setState({
           rezept: res.data,
@@ -67,7 +70,7 @@ const randomZahl = function () {
     generateRandom(),
     generateRandom(),
     generateRandom(),
-    0.3,
+    0.02,
   ];
   return containerRGB.join();
 };
@@ -81,10 +84,16 @@ const Recipe = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  @media only screen and (max-width: 1440px) {
+    /* background-color: red; */
+    flex-direction: column;
+    padding: 5rem;
+  }
 `;
 
 const CounterBox = styled.div`
-  background-color: #bccfed;
+  margin-top: 5rem;
+  background-color: #fff;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
@@ -92,20 +101,34 @@ const CounterBox = styled.div`
     padding-bottom: 5rem;
   }
   p {
-    width: 70%auto;
+    width: 70%;
     padding: 2rem 0rem 4rem 0rem;
   }
   flex: 2 1 40%;
+  @media only screen and (max-width: 1440px) {
+    order: 3;
+  }
 `;
 
 const RecipeBox = styled.div`
-  background-color: #feeb16;
+  background-color: #fff;
+  margin-top: 5rem;
   flex: 2 1 60%;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   min-height: 90vh;
   padding: 5rem 10rem;
+  @media only screen and (max-width: 1440px) {
+    order: 1;
+    padding: 5rem;
+  }
+  @media only screen and (max-width: 680px) {
+    margin-top: 5rem;
+    background-color: #585ae3;
+    padding: 0rem;
+    flex: 2 1 100%;
+  }
 `;
 
 export default OneRecipe;

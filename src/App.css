@@ -85,7 +85,7 @@ ul {
 /* _______________________Navigation */
 #NAVI {
   position: fixed;
-  top:0;
+  top: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -122,7 +122,6 @@ ul {
   text-decoration: none;
 }
 
-
 #Burger {
   display: none;
 }
@@ -140,7 +139,7 @@ ul {
   transform: rotate(45deg);
 }
 .DIV-3-X {
-  background:white;
+  background: white;
   transform: rotate(-45deg);
 }
 .DIV-MAIN {
@@ -186,7 +185,7 @@ ul {
 }
 
 #SectionRecipe button:hover {
-  background-color: #F87165;
+  background-color: #f87165;
   color: white;
   transform: translate(10px, -10px);
   transition: all 0.5s ease;
@@ -294,22 +293,17 @@ ul {
 }
 
 .button:hover {
-
   background-color: #ff6f61;
   color: white;
   transform: translate(3px, -3px);
 }
 
-.counter-kasten {
-  background-color: #85e854;
-  width: 22vw;
-  margin: 15rem auto;
-}
 .plusminus {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  background-color: #fa5dff;
+
+  /* background-color: #fa5dff; */
 }
 
 .plusminus button {
@@ -320,7 +314,7 @@ ul {
   cursor: pointer;
   padding: 1rem 2rem;
   background-color: transparent;
-  color: white;
+  color: black;
   margin-bottom: 2rem;
   transition: all 0.5s ease;
 }
@@ -355,20 +349,19 @@ ul {
 footer {
   background: #ff6f61;
   min-height: 10vh;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer-social-icons {
-  width:50%;
+  width: 50%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
   /* flex-direction: row; */
 }
 .footerIcons {
-
   font-size: 5rem;
   background: #fff;
   margin: 4rem 2rem;
@@ -376,12 +369,9 @@ footer {
   border-radius: 50%;
 }
 
-
-
 /* // MEDIAQUERIES */
 
 @media only screen and (max-width: 1124px) {
-
   .UL-NavBar {
     display: block;
     transform: translateX(100%);
@@ -389,7 +379,7 @@ footer {
 
   .UL-NavBar.open {
     transform: translateX(0);
-    transition: transform .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     display: block;
     flex-flow: column nowrap;
     background: rgba(0, 0, 0, 0.927);
@@ -415,7 +405,7 @@ footer {
   .UL-NavBar.open li a:hover {
     color: #ff6f61;
   }
-  
+
   #navigation {
     display: none;
   }
@@ -440,16 +430,16 @@ footer {
     justify-content: space-between;
   }
 
-#SectionRecipe {
-  margin: 5vh 5%;
-}
+  #SectionRecipe {
+    margin: 5vh 5%;
+  }
 
- #RecipeCard {
+  #RecipeCard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
- #today  #RecipeCard {
+  #today #RecipeCard {
     display: block;
   }
   #today #food-result .recipe {
@@ -457,21 +447,20 @@ footer {
     margin: 3vh auto 1vh;
   }
 
-#today {
-  text-align: center;
-}
+  #today {
+    text-align: center;
+  }
 
-.button {
-  margin:3vh 10%;
-  grid-column-start: 1;
-  grid-column-end: -1;
-}
+  .button {
+    margin: 3vh 10%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 
-#food-result .recipe {
-  width: 98%;
-  margin: 3vh auto 1vh;
-}
-
+  #food-result .recipe {
+    width: 98%;
+    margin: 3vh auto 1vh;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -485,13 +474,14 @@ footer {
     margin: 3vh auto 1vh;
   }
 
-#today {
-  text-align: center;
-}
+  #today {
+    text-align: center;
+  }
 
-#food-result .recipe {
-  width: 100%;
-}
-
-
+  #food-result .recipe {
+    width: 100%;
+  }
+  .one-recipe-image img {
+    width: 100%;
+  }
 }

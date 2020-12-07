@@ -14,8 +14,7 @@ const OneRecipeImage = (probs) => {
   // console.log(headerImg);
   return (
     <div className="one-recipe-image">
-      <h2>Hallo</h2>
-      <img src={headerImg} alt="" />
+      <img src={headerImg} alt="header" />
     </div>
   );
 };

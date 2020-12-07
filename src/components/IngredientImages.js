@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-// var apiKey = '7df74c97721c438485ec13af5100c9ad';
+var apiKey = '7df74c97721c438485ec13af5100c9ad';
 // var apiKey = 'bc21dba5538d4477ba88fa9e21a53749';
 // const recipeID = 1563437;
 
@@ -37,13 +37,13 @@ class IngredientImages extends React.Component {
 
   componentDidMount() {
     axios
-      // .get(
-      //   'https://api.spoonacular.com/recipes/' +
-      //     this.props.testTest +
-      //     '/ingredientWidget.json?apiKey=' +
-      //     apiKey
-      // )
-      .get('http://localhost:3000/data/ingredientsData.json')
+      .get(
+        'https://api.spoonacular.com/recipes/' +
+          this.props.testTest +
+          '/ingredientWidget.json?apiKey=' +
+          apiKey
+      )
+      // .get('http://localhost:3000/data/ingredientsData.json')
       .then((res) => {
         this.setState({
           ingredients: res.data.ingredients,

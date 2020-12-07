@@ -3,7 +3,7 @@ import IngredientImages from './IngredientImages';
 
 // import data from '../data/test_data.json';
 import Ingredients from './Ingredients';
-
+import styled from 'styled-components';
 // const sayHelloHandler = (e) => {
 //   console.log('hallo');
 // };
@@ -36,7 +36,7 @@ class Counter extends Component {
   render() {
     console.log(this.props.testUebergabe + 'Hallo Übergabe');
     return (
-      <div className="counter-kasten">
+      <CounterKasten>
         <IngredientImages />
         <div className="plusminus">
           {/* <button onClick={() => sayHelloHandler}>Hallo</button> */}
@@ -59,9 +59,20 @@ class Counter extends Component {
             testTest={this.props.testUebergabe}
           />
         </div>
-      </div>
+      </CounterKasten>
     );
   }
 }
+
+const CounterKasten = styled.div`
+  /* background-color: #85e854; */
+  width: 22vw;
+  margin: 15rem auto;
+  @media only screen and (max-width: 1440px) {
+    /* background-color: red; */
+    padding: 5rem;
+    width: 80vw;
+  }
+`;
 
 export default Counter;
