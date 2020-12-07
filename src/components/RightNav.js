@@ -1,13 +1,19 @@
-import { Link } from 'react-router-dom';
-import Burger from './Burger';
+import React from 'react'
+import { Link} from "react-router-dom";
 
-const Navigation = () => {
-  return (
-    <nav id="NAVI">
-      <h3 id="logoTASTY">TASTY</h3>
-      <Burger />
+const RightNav = (props) => {
+    let BGID = ['UL-NavBar']
+    
+    
+    if(props.show) {
+      BGID = ['UL-NavBar open']
       
-      <ul id="navigation">
+      
+    }
+
+    return ( 
+
+        <ul className={BGID}>
         <li>
           <Link to="/">All Recipe</Link>
         </li>
@@ -25,8 +31,9 @@ const Navigation = () => {
           <Link to="/randomrecipe">Random recipe</Link>
         </li>
       </ul>
-    </nav>
-  );
-};
 
-export default Navigation;
+
+     );
+}
+ 
+export default RightNav;

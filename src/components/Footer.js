@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="footer-social-icons">
       
             
-            <FaFacebookF id="Facebook"  />
+            <FaFacebookF className="footerIcons"id="Facebook"  />
 
-            <FaInstagram id="Instagram" />
+            <FaInstagram className="footerIcons"id="Instagram" />
 
-            <FaTwitter id="Twitter" />
+            <FaTwitter className="footerIcons"id="Twitter" />
            
          </div>
         </footer>
