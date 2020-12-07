@@ -5,28 +5,25 @@ import React from 'react';
 import axios from 'axios';
 // import Tweet from './Tweet';
 
-var apiKey = '7df74c97721c438485ec13af5100c9ad';
-// var apiKey = 'bc21dba5538d4477ba88fa9e21a53749';
-
 class Instructions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       instructions: [],
-      // id: 635350,
+      id: 635350,
       testtest: [],
-      id: this.props.match.params.id,
+      // id: this.props.match.params.id,
     };
   }
   componentDidMount() {
     axios
-      .get(
-        'https://api.spoonacular.com/recipes/' +
-          this.state.id +
-          '/information?apiKey=' +
-          apiKey
-      )
-      // .get('http://localhost:3000/data/instructionData.json')
+      // .get(
+      //   'https://api.spoonacular.com/recipes/' +
+      //     this.state.id +
+      //     '/information?apiKey=' +
+      //     apiKey
+      // )
+      .get('http://localhost:3000/data/instructionData.json')
       .then((res) => {
         this.setState({
           instructions: res.data[0].steps,

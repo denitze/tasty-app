@@ -4,10 +4,10 @@ import axios from 'axios';
 import RandomVegetarian from './RandomVegetarian';
 import {Link} from "react-router-dom";
 // import recipeData from "../data/recipeDataDenise.json"
- 
 
-// var apiKey = "df611f75b97141be917063ad735d8e66";
+
 var apiKey2 = "df611f75b97141be917063ad735d8e66";
+// var apiKey2 = "df611f75b97141be917063ad735d8e66";
 
 class Vegetarian extends React.Component {
 
@@ -19,17 +19,17 @@ class Vegetarian extends React.Component {
         isLoading: false
       }
     }
-    
+
     handleChange = e =>{
       this.setState({
       searchWord : e.target.value
     })
     }
-  
+
     handleEnter = e =>{
       if(e.keyCode === 13) this.handleSearch(this.state.searchWord)
     }
-  
+
     handleSearch = (searchWord) => {
       if(searchWord){
       axios.get('https://api.spoonacular.com/recipes/search?query='+searchWord+'&diet=vegetarian&number=3&apiKey='+apiKey2)
@@ -43,9 +43,9 @@ class Vegetarian extends React.Component {
       }
       else this.setState({ recipe:[]})
     }
-  
+
     render() {
-  
+
       return (
         <section id="SectionRecipe">
             <div className="inputRecipe">
@@ -53,13 +53,13 @@ class Vegetarian extends React.Component {
                 <input type="text" name="" id="ingredient" placeholder="enter an ingredient" onChange={this.handleChange} onKeyUp={this.handleEnter}  />
                 <button onClick={()=>this.handleSearch(this.state.searchWord)}>Search for recipes!</button>
             </div>
-            <div id="RecipeCard">  
-            
+            <div id="RecipeCard">
+
           {
-            
+
             this.state.isLoading ?
             this.state.recipe.map(
-              (recipe)=> 
+              (recipe)=>
               <div id="food-result">
               <div className="recipe" key={recipe.id}>
                   <img src={' https://spoonacular.com/recipeImages/' + recipe.id + '-480x360'}alt="" />
@@ -71,11 +71,11 @@ class Vegetarian extends React.Component {
               </div>
           </div>
             ) : <RandomVegetarian />
-          } </div> 
-              </section> 
+          } </div>
+              </section>
       );
     }
-  
+
   }
-  
+
   export default Vegetarian;

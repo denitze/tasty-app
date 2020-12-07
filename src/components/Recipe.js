@@ -54,7 +54,7 @@ class OneRecipe extends React.Component {
             <OneRecipeBadges rezept={this.state.rezept} />
             <OneRecipeImage rezept={this.state.rezept} />
             {/* <OneRecipeSummary rezept={this.state.rezept} /> */}
-            <Instructions />
+            <Instructions rezept={this.state.rezept.id} />
           </RecipeBox>
         </Recipe>
       </>

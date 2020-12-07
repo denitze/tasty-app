@@ -4,8 +4,8 @@ import RandomAll from './RandomAll';
 import { Link } from 'react-router-dom';
 // import styled from 'styled-components';
 
-// var apiKey = "dc19a07e2b204a24857d8eff71c69d5b";
-var apiKey2 = 'df611f75b97141be917063ad735d8e66';
+var apiKey2 = 'dc19a07e2b204a24857d8eff71c69d5b';
+// var apiKey2 = 'df611f75b97141be917063ad735d8e66';
 
 class SectionRecipe extends React.Component {
   constructor(props) {
