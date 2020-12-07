@@ -33,7 +33,7 @@ class BetterEat extends React.Component {
         .get(
           'https://api.spoonacular.com/recipes/search?query=' +
             searchWord +
-            '&diet=paleo&number=3&apiKey=' +
+            '&diet=paleo&number=9&apiKey=' +
             apiKey2
         )
         .then((res) => {

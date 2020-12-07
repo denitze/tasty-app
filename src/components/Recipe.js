@@ -125,7 +125,7 @@ const RecipeBox = styled.div`
   }
   @media only screen and (max-width: 680px) {
     margin-top: 5rem;
-    background-color: #585ae3;
+    /* background-color: #585ae3; */
     padding: 0rem;
     flex: 2 1 100%;
   }

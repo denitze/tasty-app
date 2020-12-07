@@ -33,7 +33,7 @@ class SectionRecipe extends React.Component {
         .get(
           'https://api.spoonacular.com/recipes/search?query=' +
             searchWord +
-            '&number=3&apiKey=' +
+            '&number=9&apiKey=' +
             apiKey2
         )
         .then((res) => {
