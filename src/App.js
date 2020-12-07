@@ -1,10 +1,6 @@
 import './App.css';
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Navigation from './components/Navigation';
 // import Footer from './components/Footer';
 import SectionRecipe from './components/SectionRecipe';
@@ -17,37 +13,28 @@ import Random from './components/Random';
 import Today from './components/Today';
 import Recipe from './components/Recipe';
 
-
 function App() {
   return (
-<Router>
+    <Router>
+      <Navigation />
 
-<Navigation />
+      <Switch>
+        <Route path="/" exact component={SectionRecipe} />
 
-<Switch>
+        <Route path="/recipe/:id" component={Recipe} />
 
-<Route path="/" exact component={SectionRecipe} />
+        <Route path="/today" component={Today} />
 
-<Route path="/recipe/:id" component={Recipe} />
-  
-  <Route path="/today" component={Today} />
+        <Route path="/vegetarian" component={Vegetarian} />
 
-  <Route path="/vegetarian" component={Vegetarian} />
-  
-  <Route path="/bettereat" component={BetterEat} />
+        <Route path="/bettereat" component={BetterEat} />
 
-  <Route path="/randomrecipe" component={Random} />
+        <Route path="/randomrecipe" component={Random} />
+      </Switch>
 
-</Switch>
-
-<Footer />
-
-
-</Router>
-
+      <Footer />
+    </Router>
   );
 }
 
 export default App;
-
-  
