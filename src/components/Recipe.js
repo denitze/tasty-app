@@ -13,6 +13,7 @@ import axios from 'axios';
 
 var apiKey = '7df74c97721c438485ec13af5100c9ad';
 // var apiKey = 'bc21dba5538d4477ba88fa9e21a53749';
+// var apiKey = 'df611f75b97141be917063ad735d8e66';
 
 class OneRecipe extends React.Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class OneRecipe extends React.Component {
       // id: 635350,
       id: this.props.match.params.id,
     };
+    console.log(this.props.match.params.id);
   }
   componentDidMount() {
     axios
@@ -42,11 +44,15 @@ class OneRecipe extends React.Component {
   }
 
   render() {
+    console.log(this.state.id);
     return (
       <>
         <Recipe>
           <CounterBox>
-            <TestCounter rezept={this.state.rezept} />
+            <TestCounter
+              idTest={this.state.id}
+              servings={this.state.rezept.servings}
+            />
             {/* <Equipment /> */}
           </CounterBox>
           <RecipeBox>
@@ -54,7 +60,7 @@ class OneRecipe extends React.Component {
             <OneRecipeBadges rezept={this.state.rezept} />
             <OneRecipeImage rezept={this.state.rezept} />
             {/* <OneRecipeSummary rezept={this.state.rezept} /> */}
-            <Instructions rezept={this.state.rezept.id} />
+            <Instructions idTest={this.state.id} />
           </RecipeBox>
         </Recipe>
       </>

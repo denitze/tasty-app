@@ -1,21 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
-var apiKey = '7df74c97721c438485ec13af5100c9ad';
+// var apiKey = '7df74c97721c438485ec13af5100c9ad';
 // var apiKey = 'bc21dba5538d4477ba88fa9e21a53749';
 // const recipeID = 1563437;
+var apiKey = 'df611f75b97141be917063ad735d8e66';
 
 class IngredientImages extends React.Component {
   state = { count: this.props.testState };
 
-  static getDerivedStateFromProps(props, state) {
-    if (props.testState !== state.count) {
-      return {
-        count: props.testState,
-      };
-    }
-    return null;
-  }
   constructor(props) {
     // console.log(props.testHallo);
     // console.log(props.testState + ' state');

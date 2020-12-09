@@ -4,7 +4,7 @@ import RandomBetter from './RandomBetter';
 import { Link } from 'react-router-dom';
 
 var apiKey2 = 'dc19a07e2b204a24857d8eff71c69d5b';
-// var apiKey2 = "df611f75b97141be917063ad735d8e66";
+// var apiKey2 = 'df611f75b97141be917063ad735d8e66';
 
 class BetterEat extends React.Component {
   constructor(props) {

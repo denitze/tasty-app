@@ -34,10 +34,12 @@ class Counter extends Component {
     );
   };
   render() {
-    console.log(this.props.testUebergabe + 'Hallo Übergabe');
+    console.log(this.props.idTest + 'Hallo Übergabe');
+    console.log(this.props.servings);
+    console.log(this.state.count);
     return (
       <CounterKasten>
-        <IngredientImages />
+        <IngredientImages testTest={this.props.idTest} />
         <div className="plusminus">
           {/* <button onClick={() => sayHelloHandler}>Hallo</button> */}
           <div className="minus">
@@ -56,7 +58,7 @@ class Counter extends Component {
         <div className="test">
           <Ingredients
             testState={this.state.count}
-            testTest={this.props.testUebergabe}
+            testTest={this.props.idTest}
           />
         </div>
       </CounterKasten>
